@@ -1,0 +1,434 @@
+    <div class="container">
+        <header>
+            <img src="Logo 26.jpg"><!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Meistarklase 2026 | Bezmaksas Vebinārs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d3436 0%, #1e272e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(126, 196, 136, 0.1) 100%);
+        }
+
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+            filter: drop-shadow(0 8px 16px rgba(126, 196, 136, 0.3));
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #2d3436;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #7ec488, #5d9b6d);
+            border-radius: 2px;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .topic-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #7ec488;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(126, 196, 136, 0.2);
+            border-left-width: 6px;
+        }
+
+        .topic-time {
+            color: #7ec488;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .topic-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+
+        .topic-description {
+            color: #636e72;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .details-section {
+            background: linear-gradient(135deg, #2d3436 0%, #1e272e 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .details-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(126,196,136,0.1)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+
+        .details-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .details-section h2 {
+            color: white;
+        }
+
+        .details-section h2::after {
+            background: white;
+        }
+
+        .details-box {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+            border: 2px solid rgba(126, 196, 136, 0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .detail-item {
+            margin: 25px 0;
+            font-size: 1.2em;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .detail-value {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .zoom-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #7ec488 0%, #5d9b6d 100%);
+            color: white;
+            padding: 18px 50px;
+            margin-top: 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(126, 196, 136, 0.4);
+            border: 2px solid transparent;
+        }
+
+        .zoom-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(126, 196, 136, 0.5);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            header, section {
+                padding: 40px 20px;
+            }
+
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Excel Meistarklase 2026</h1>
+            <p class="subtitle">No pamata līdz profesionālam līmenim 5 stundās!</p>
+            <p class="intro">
+                Pievienojies mūsu intensīvajam bezmaksas vebināram un apgūsti Microsoft Excel prasmes, kas pārveidos tavu darbu ar datiem. 
+                No vienkāršām formulām līdz Power Query — viss, kas nepieciešams mūsdienu datu analīzei.
+            </p>
+        </header>
+
+        <section>
+            <h2>Programma</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-time">12:00 - 12:08</div>
+                    <div class="topic-title">MS Excel versijas</div>
+                    <div class="topic-description">Iepazīsimies ar dažādām Excel versijām un to iespējām. Uzzināsi, kuras funkcijas ir pieejamas tavā versijā.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:08 - 12:16</div>
+                    <div class="topic-title">Pārvietošanās Excel - bez peles</div>
+                    <div class="topic-description">Apgūsti tastatūras saīsnes un kļūsti par Excel virtuozu. Ātrums un efektivitāte pieaugums garantēts!</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:16 - 12:24</div>
+                    <div class="topic-title">Vecā adresācija - $ zīmju izmantošana</div>
+                    <div class="topic-description">Saprot absolūtās un relatīvās atsauces būtību. Pamats efektīvai formulu veidošanai.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:24 - 12:32</div>
+                    <div class="topic-title">Jaunā adresācija - SPILL piemēri</div>
+                    <div class="topic-description">Iepazīsties ar mūsdienīgo masīvu formulu pieeju izmantojot SUM, AVERAGE un citas funkcijas.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:32 - 12:40</div>
+                    <div class="topic-title">Format Cells - visi noformēšanas veidi</div>
+                    <div class="topic-description">Apgūsti datu formatēšanas mākslu, ieskaitot pielāgotus formātus jebkurai vajadzībai.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:40 - 12:48</div>
+                    <div class="topic-title">Datums Excel'ī - koncepcija un funkcijas</div>
+                    <div class="topic-description">Uzzini, kā Excel glabā datumus un kā tos efektīvi izmantot aprēķinos un analīzē.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:48 - 12:56</div>
+                    <div class="topic-title">Teksts Excel'ī - koncepcija un funkcijas</div>
+                    <div class="topic-description">Apgūsti teksta manipulācijas funkcijas un padarīsi datu tīrīšanu par vienkāršu uzdevumu.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">12:56 - 13:04</div>
+                    <div class="topic-title">Excel Tabula - adresācija un piemēri</div>
+                    <div class="topic-description">Izmanto strukturētu datu glabāšanu ar Excel tabulām un aizmirsti par sarežģītām atsaucēm.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">13:04 - 13:12</div>
+                    <div class="topic-title">Excel grafiki - uzbūves piemērs</div>
+                    <div class="topic-description">Vizualizē savus datus ar profesionāliem grafikiem, kas pauž stāstu skaidrāk nekā skaitļi.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">13:12 - 13:28</div>
+                    <div class="topic-title">Conditional Formatting</div>
+                    <div class="topic-description">Apgūsti gan gatavos risinājumus, gan pielāgotas formulas ar nosacījumu formatēšanu vizuālai datu analīzei.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">13:28 - 13:44</div>
+                    <div class="topic-title">IF un IFS funkcijas</div>
+                    <div class="topic-description">Izveido loģiskas konstrukcijas un automatizē lēmumu pieņemšanu ar šīm fundamentālajām funkcijām.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">13:44 - 13:52</div>
+                    <div class="topic-title">UNIQUE funkcija un atskaites</div>
+                    <div class="topic-description">Atklāj unikālās vērtības datos un apvieno ar IF/IFS funkcijām jaudīgām atskaitēm.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">13:52 - 14:00</div>
+                    <div class="topic-title">Data Validation rīks</div>
+                    <div class="topic-description">Nodrošini datu kvalitāti ar validācijas noteikumiem un izveido dinamiskus risinājumus ar IF/IFS.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">14:00 - 14:24</div>
+                    <div class="topic-title">Uzmeklēšanas funkcijas</div>
+                    <div class="topic-description">Apgūsti VLOOKUP, INDEX/MATCH kombināciju un mūsdienīgo XLOOKUP ar visiem tās papildus argumentiem.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">14:24 - 14:32</div>
+                    <div class="topic-title">FILTER funkcija</div>
+                    <div class="topic-description">Filtrē datus dinamiski ar jaudīgu formulu, kas automātiski atjaunojas.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">14:32 - 14:56</div>
+                    <div class="topic-title">LET funkcija - dažādi piemēri</div>
+                    <div class="topic-description">Optimizē savas formulas ar mainīgajiem un izveido sarežģītas atskaites ar vienu formulu.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">14:56 - 15:36</div>
+                    <div class="topic-title">Pivot Table mastery</div>
+                    <div class="topic-description">No pamatiem līdz dashboard izveidei - apgūsti datu apkopošanu, aprēķinus un vizualizāciju ar Pivot tabulām.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">15:36 - 15:44</div>
+                    <div class="topic-title">Kas ir Power Query un ETL</div>
+                    <div class="topic-description">Iepazīsties ar spēcīgāko Excel datu apstrādes rīku un ETL koncepciju.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">15:44 - 16:08</div>
+                    <div class="topic-title">Power Query pamati</div>
+                    <div class="topic-description">Apgūsti Power Query Editor interfeisu un parastākos datu pārveidojumus - sadalīšana, aizstāšana, failu apkopošana.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">16:08 - 16:24</div>
+                    <div class="topic-title">Power Query modeļa principi</div>
+                    <div class="topic-description">Apvieno datus no vairākām tabulām ar Merge operācijām - gan vienkārši, gan sarežģīti piemēri.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">16:24 - 16:40</div>
+                    <div class="topic-title">Group By un Conditional Column</div>
+                    <div class="topic-description">Agregē datus pēc grupām un pievieno pielāgotus nosacījumus saviem pārveidojumiem.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">16:40 - 16:56</div>
+                    <div class="topic-title">Power Query nestandarta pārveidojumi</div>
+                    <div class="topic-description">Apgūsti unpivot/pivot operācijas un citus sarežģītus datu pārstrukturēšanas paņēmienus.</div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-time">16:56 - 17:12</div>
+                    <div class="topic-title">Power Query M valoda un funkcijas</div>
+                    <div class="topic-description">Ienirsti dziļāk - iepazīsti M valodu, Advanced Editor un izveido savas funkcijas sarežģītiem uzdevumiem.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <h2>Reģistrācijas detaļas</h2>
+            <div class="details-box">
+                <div class="detail-item">
+                    <div class="detail-label">📅 Datums</div>
+                    <div class="detail-value">Svētdiena, 5. janvāris 2026</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">🕐 Laiks</div>
+                    <div class="detail-value">12:00 - 17:12 (5 stundas)</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">💻 Platforma</div>
+                    <div class="detail-value">Zoom</div>
+                </div>
+                <a href="<link>" class="zoom-button" target="_blank">🚀 Pievienoties vebināram</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Excel Meistarklase | Bezmaksas izglītojošs vebinārs</p>
+        </footer>
+    </div>
+</body>
+</html>
